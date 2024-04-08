@@ -15,7 +15,9 @@ class _FirstHomePageState extends State<FirstHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text(''),
       ),
       backgroundColor: Colors.white,
