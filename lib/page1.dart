@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moneyappui/first_homepage.dart';
 
 class Page1 extends StatelessWidget {
   final String name;
@@ -24,6 +25,11 @@ class Page1 extends StatelessWidget {
                       icon: Icon(Icons.arrow_back),
                       onPressed: () {
                         // Handle back button press
+                        Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FirstHomePage()),
+                            (route) => false);
                       },
                     ),
                     CircleAvatar(

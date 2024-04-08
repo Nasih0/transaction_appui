@@ -22,6 +22,13 @@ class _NavigationPageState extends State<NavigationPage> {
       body: _getPage(_currentIndex),
       backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.black, // Change the selected item color
+        unselectedItemColor:
+            Colors.black.withOpacity(0.6), // Change the unselected item color
+        selectedLabelStyle: TextStyle(
+            color: Colors.black), // Change the selected label text color
+        unselectedLabelStyle: TextStyle(
+            color: Colors.black), // Change the unselected label text color
         currentIndex: _currentIndex,
         onTap: (int index) {
           setState(() {
@@ -34,28 +41,28 @@ class _NavigationPageState extends State<NavigationPage> {
               Icons.home,
               color: Colors.black,
             ),
-            label: 'Page 1',
+            label: 'home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.search,
               color: Colors.black,
             ),
-            label: 'Page 2',
+            label: 'search',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.notifications,
               color: Colors.black,
             ),
-            label: 'Page 3',
+            label: 'notification',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.account_circle,
               color: Colors.black,
             ),
-            label: 'Page 4',
+            label: 'account',
           ),
         ],
       ),
